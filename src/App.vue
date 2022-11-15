@@ -1,5 +1,6 @@
 <template>
   <section >
+  <h1> BAM </h1>
    <p class="background h2"><img  :src="picture1" :width="size" :height="size"  /></p>
     <h1>Name:{{ getFullName() }}</h1>
     <p>Socail:<a :href="social" target="Phonphiwat">facebook</a></p>

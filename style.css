@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+
+
+
+        button{
+            padding: 20px 50px; /*กำหนดขอ กว้าง ยาว สูง*/
+            font-size: 1rem;
+            cursor: pointer;
+            border: 0px;
+            background: transparent;
+            transition: all 1s ease;
+
+        }
+        .btn1{
+            margin:100px, 200px;
+            background: yellowgreen;
+            color: black;
+        }
+        .btn2{
+            margin:100px, 200px;
+            background: orange;
+            color: black;
+        }
+        .btn3{
+            margin:100px, 200px;
+            background: skyblue;
+            color: black;
+        }
+        .btn1:hover,.btn2:hover,.btn3:hover{
+            transform: translate(-1px ,-20px);
+        }
+
+        .h1{
+            text-align: center;
+            color: white;
+        }
+        
+    

@@ -15,25 +15,25 @@
         .btn1{
             margin:100px, 200px;
             background: yellowgreen;
+           border-radius: 20px;
             color: black;
         }
         .btn2{
             margin:100px, 200px;
             background: orange;
+            border-radius: 20px;
             color: black;
         }
         .btn3{
             margin:100px, 200px;
             background: skyblue;
+            border-radius: 20px;
             color: black;
         }
         .btn1:hover,.btn2:hover,.btn3:hover{
             transform: translate(-1px ,-20px);
+          
         }
 
-        .h1{
-            text-align: center;
-            color: white;
-        }
-        
+      
     

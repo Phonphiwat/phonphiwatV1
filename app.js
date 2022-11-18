@@ -1,4 +1,5 @@
 
+
 function testCSS(){
     alert("Coming soon");
 }
@@ -8,10 +9,21 @@ function testHTML(){
 }
 function testJavaScript(){
 
+      ///////////////////////////////////////////////////////
+      const tax = 0.07;
+      let Money = 120+1;
+      let price = 29.11;
+      Name = "phon ";
+      gg = 23;
+
+    //Text
+document.write(" <h1><i>Phonphiwat Kongthong</i></h1>");
+document.write(Name, gg);
+
     //แจ้งเตือนรายระเอียด
     alert("การใช้คำสั่ง JavaScript"); 
     alert("Hello User ");
-
+   //เรียงลำดับ ตัวเลข ตัวอัคษร
     let cons = [1 ,3,5 ,2 , 4 ];
     let con = cons.length;
     document.write("ก่อนเรียง = ",cons);
@@ -27,19 +39,7 @@ function testJavaScript(){
     document.write("<br> เรียงตัวอักษร = ",result);
     console.log(result);
 
-    ///////////////////////////////////////////////////////
-    const tax = 0.07;
-let name;
-let Money = 120+1;
-let price = 29.11;
-Name = "phon ";
-gg = 23;
 
-
-//Text
-document.write(" <h2><i>Bam Phonphiwat</i></h2>");
-document.write("<h2><p><i>Kongthong</i></p></h2>");
-document.write(Name, gg);
 //Array
 let num = Array("1","2","3","4","5");
 let color =[" <br> red"," blue ","  black <br> "," yellow "];
@@ -149,6 +149,55 @@ document.write("<br>Hello",count,"<br>");
 }
 count++;
 }
+// function return ส่งต่าออก
+
+function getaddress(){
+    let add = "อุดรธานี";
+    return add;
+}
+let adddress = getaddress();
+document.write(" <br> ที่อยู่ ",adddress);
+
+// function return รับและส่งต่าออก
+function salary(salary){
+    let bonus = 1000;
+    return salary+bonus;
+}
+let sala = salary(15000);
+sala -= 200;
+document.write("<br> เงินเดือน+โบว์นัส-ค่าประกัน 200 =",sala);
+
+function salary2(s,m){
+    return s+m;
+}
+let sad = salary2(10000,3000);
+sad -= 200;
+document.write("<br> เงินเดือน+โบว์นัส-ค่าประกัน 200 =",sad);
+
+function getName(city,lname){
+    return city+lname;
+}
+let cl = getName(" ชื่อ............. "," ที่อยู่..............<br> ");
+document.write("<br>",cl);
+
+// function กำหยดค่าเริ่มต้น
+function getdefault(F,L,C="ไม่ระบุ"){
+    document.write("<br>ชื่อ ",F," นามสกุล ",L," ที่อยู่ ",C);
+}
+getdefault("พลพิวัฒน์","กองทอง","อุดรธานี");
+getdefault("พลพิวัฒน์","กองทอง",);
+
+function gettest(K="ไม่ระบุ"){
+    document.write("<br>ชื่อ ",K);
+}
+gettest();
+
+// Array function 
+
+
+
+
+
 
 console.log("Hello");
 console.error("ไวรัส");

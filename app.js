@@ -9,6 +9,16 @@ function testHTML(){
 }
 function testJavaScript(){
 
+
+    //fucetion ใช้ผู้ใช้เลือกกดปุ่ม OK cancle 
+        let sel = confirm("Hello");
+        if(sel){
+            document.write("cancle");
+        }else{
+            console.log(testJavaScript());
+            
+        }
+ 
       ///////////////////////////////////////////////////////
       const tax = 0.07;
       let Money = 120+1;
@@ -20,13 +30,23 @@ function testJavaScript(){
 document.write(" <h1><i>Phonphiwat Kongthong</i></h1>");
 document.write(Name, gg);
 
-    //แจ้งเตือนรายระเอียด
-    alert("การใช้คำสั่ง JavaScript"); 
-    alert("Hello User ");
+document.write("<h1><br> Array </br></h1>");
+//Array
+let num = Array("1","2","3","4","5");
+let color =[" <br> red"," blue ","  black <br> "," yellow "];
+
+document.write("<br> ตัวแรก ",num[0]," ตัวที่สาม ",num[2]);
+document.write(" ตัวที่สอง ",num[1]);
+document.write(color [0] ,color[1],color[2]);
+document.write("<p> A=5 B=2</p>");
+
+
+//Array
+
    //เรียงลำดับ ตัวเลข ตัวอัคษร
     let cons = [1 ,3,5 ,2 , 4 ];
     let con = cons.length;
-    document.write("ก่อนเรียง = ",cons);
+    document.write("<br>ก่อนเรียง = ",cons);
     console.log(cons);
     document.write("<br>เรียงตังเลข = ", cons.sort());
     console.log(cons);
@@ -39,15 +59,21 @@ document.write(Name, gg);
     document.write("<br> เรียงตัวอักษร = ",result);
     console.log(result);
 
+     //เรียงลำดับ ตัวเลข 
+     //น้อยไม่มาก 
+     let points = [-20,-10,-5,20,10,5];
+     points.sort(function(t,y){
+        return t-y;
+     });
+     document.write("<br> น้อยไปมาก = ",points);
+     //มากไปนน้อย
+     let point = [-20,-10,-5,20,10,5];
+     point.sort(function(t,y){
+        return y-t;
+     });
+     document.write("<br> มากไปน้อย = ",point);
 
-//Array
-let num = Array("1","2","3","4","5");
-let color =[" <br> red"," blue ","  black <br> "," yellow "];
 
-document.write("<br> ตัวแรก ",num[0]," ตัวที่สาม ",num[2]);
-document.write(" ตัวที่สอง ",num[1]);
-document.write(color [0] ,color[1],color[2]);
-document.write("<p> A=5 B=2</p>");
 //บวก ลบ คูณ หาร หาเศษ
 
 const A = 5;
@@ -63,6 +89,31 @@ document.write("<br> Aไม่เท่ากับBหรือไม่= ",A!
 document.write("<br> Aน้อยกว่าBหรือไม่= ",A<=B);
 document.write("<br> Aมากกว่าBหรือไม่= ",A>=B,"<br>");
 
+//Array โดยใช้ forEach
+let para = ["แก้ปวด","แก้ไข้","แก้ท้องเสีย","แก้เวียนหัว<br>",];
+para.forEach(item);
+function item(get){
+    document.write("<br>para = ",get);
+}
+//แปลง Array toString 
+let ats = ["<br>แดง","ขาว","เหลือง","ดำ","น้ำเงิน","เขียว<br>"];
+let g =ats.toString();
+let m = ats.join(" | ");
+
+document.write(g,m);
+
+// การรวม Array
+document.write("<br>ก่อนรวม Array");
+let c1 = ["<br>iphone11","iphone12<br>"];
+document.write(c1);
+let c2 = ["iphone13","iphone14<br>"];
+document.write(c2);
+document.write("<br>หลังรวม Array");
+let c3 = c1.concat(c2);
+document.write(c3);
+
+// If else for while switch case for loop
+document.write("<h1><br> if ,if else ,for ,while ,switch case ,for loop </br></h1>");
 //แจ้งระดับชั้น
 let ae = 15;
 
@@ -124,7 +175,7 @@ switch(month){
     break;
     case 3: document.write(" <br>มีนา  ");
     break;
-    case 4: document.write(" <br>เมษา  ");
+    case 4: document.write(" <br>เมษา <br> ");
     break;
     default: document.write("no info  ");
 
@@ -140,8 +191,16 @@ const fr = ["Apple, ", "Banana, ", "Orange, <br>"];
 for (x of fr) {
   document.write("fruits = ",x);
 }
+//การใช้ for loop
+
+let loop =["loop1","loop2","loop3","loop4","loop5<br>"];
+for(i=0;i<loop.length;i++){
+    document.write(" <br> loop = ",i," name = ",loop[i]);
+    console.log(" <br> loop = ",i," name = ",loop[i]);
+}
+
 //การใช้while
-let count=1
+let count = 1
 while(count<=6){
 document.write("<br>Hello",count,"<br>");
   if(count==3){
@@ -150,6 +209,7 @@ document.write("<br>Hello",count,"<br>");
 count++;
 }
 // function return ส่งต่าออก
+document.write("<h1><br> Function </br></h1>");
 
 function getaddress(){
     let add = "อุดรธานี";
@@ -163,16 +223,16 @@ function salary(salary){
     let bonus = 1000;
     return salary+bonus;
 }
-let sala = salary(15000);
+let sala = salary(55000);
 sala -= 200;
-document.write("<br> เงินเดือน+โบว์นัส-ค่าประกัน 200 =",sala);
+document.write("<br> เงินเดือน-ค่าประกัน 200 =",sala);
 
 function salary2(s,m){
     return s+m;
 }
-let sad = salary2(10000,3000);
+let sad = salary2(50000,3000);
 sad -= 200;
-document.write("<br> เงินเดือน+โบว์นัส-ค่าประกัน 200 =",sad);
+document.write("<br> เงินเดือน-ค่าประกัน 200 =",sad);
 
 function getName(city,lname){
     return city+lname;
@@ -192,10 +252,39 @@ function gettest(K="ไม่ระบุ"){
 }
 gettest();
 
-// Array function 
+//Object
+document.write("<h1><br>Object</h1></br>");
 
+let product = {
+    VGA : " RTX 3080ti<br>",
+    BOARD : "H690<br>",
+    CPU : "15 12400<br>",
+    RAM : "corsai 32gb ddr5<br>",
+    CASE : "T1 ",
+    POWER : "corsair 850w<br>",
+    SSD : "samsung <br>",
 
+    //การเรียกใช้แบบที่1
+    display:function(){
+        return "<br>CPU = "+this.CPU+"Board = "+this.BOARD+"VGA = "+this.VGA+"RAM = "+this.RAM+"SSD = "+this.SSD+"Caes = "+this.CASE+"<br>";
+    }
+};
+//การเรียกใช้แบบที่1
+document.write(product.display());
 
+document.write("--------------------------------------------------------------------------------------------")
+//การเรียกใช้แบบที่2
+document.write(
+  "CPU = ", product.CPU,
+  "Board = ", product.BOARD,
+  "VGA = ", product.VGA,
+  "RAM = ",product.RAM,
+  "Power = ",product.POWER,
+  "SSD = ",product.SSD,
+  "CASE = "  ,product.CASE, 
+   );
+
+   
 
 
 

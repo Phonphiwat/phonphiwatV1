@@ -7,7 +7,6 @@
             padding: 20px 50px; /*กำหนดขอ กว้าง ยาว สูง*/
             font-size: 1rem;
             cursor: pointer;
-            border: 0px;
             background: transparent;
             transition: all 1s ease;
 
@@ -30,9 +29,40 @@
             border-radius: 20px;
             color: black;
         }
-        .btn1:hover,.btn2:hover,.btn3:hover{
+        .btn4{
+            margin: 50px;
+            border-radius: 5px;
+            border-color: aquamarine;
+            border-bottom-left-radius: 29px;
+         
+            color: black;
+        }
+        .btn5{
+           padding: 20px;
+            border-radius: 15px;
+          background-color: red;
+            color: black;
+        }
+        .btn6{
+            padding: 20px;
+            background: yellowgreen;
+           border-radius: 20px;
+            color: black;
+        }
+        .btn1:hover,.btn2:hover,.btn3:hover,.btn5:hover,.btn6:hover{
             transform: translate(-1px ,-20px);
           
+        }
+
+        .darkMode{
+            border: 2px solid white;
+            color: white;
+            background-color: black;
+            padding: 20px;
+            margin: 20px;
+        }
+        .bkcolor{
+            background-color: rgb(200, 234, 238);
         }
 
       

@@ -1,3 +1,81 @@
+//
+function welcome(){
+    alert ("Welcome");
+}
+
+function hightlight(obj){
+obj.style.background="gray";
+}
+
+function unhightlight(ob){
+    ob.style.background="white";
+    }
+
+function getmenu(){
+    const menu = document.getElementById('me');
+    const dis = document.getElementById('dis');
+    console.log(menu.value);
+    dis.innerText = menu.value;
+}
+ const box = document.getElementById('box');
+
+function addDark(){
+    box.classList.toggle("darkMode");
+}
+function rmaddDark(){
+    box.classList.remove("darkMode");
+}
+
+
+// DOM Js HTML
+
+const menu = document.getElementById('menu');
+
+let count = 1;
+
+function add(){
+    const item = document.createElement('li');
+    item.innerText ="item "+(count++);
+    menu.appendChild(item);
+
+}
+
+// DOM Js HTML
+const a = document.getElementById('demo');
+console.log(a);
+
+const b = document.getElementById('de');
+console.log(b);
+
+const c = document.getElementById('mo');
+console.log(c);
+
+const d = document.querySelectorAll('p');
+console.log(d);
+
+function btn(){
+
+    a.innerHTML = "<strong>Phopnhiwat Kongthong</strong><br>";
+    b.innerHTML = "<strong>FB: Phonphiwat Kongthong</strong><br>";
+    c.innerHTML = "<strong>0809790817</strong><br>";
+
+    a.style.color ="red";
+    b.style.color = "green";
+    
+
+}
+function btn1(){
+    a.innerHTML = "<strong>***********</strong><br>";
+    b.innerHTML = "<strong>***********</strong><br>";
+    c.innerHTML = "<strong>***********</strong><br>";
+
+    a.style.color ="black";
+    b.style.color = "black";
+ 
+}
+
+
+
 
 
 function testCSS(){
@@ -272,7 +350,7 @@ let product = {
 //การเรียกใช้แบบที่1
 document.write(product.display());
 
-document.write("--------------------------------------------------------------------------------------------")
+document.write("--------------------------------------------------------------------------------------------<br>")
 //การเรียกใช้แบบที่2
 document.write(
   "CPU = ", product.CPU,
@@ -300,6 +378,7 @@ console.log(Money);
 console.log(price);
 
 }
+
 
 
 
